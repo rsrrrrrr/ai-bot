@@ -1,0 +1,26 @@
+href= "https://rsrrrrrr.github.io/ai-bot/"usr</a>href="https://chat.openai.com/chat/834d0a08-bc31-4f80-81da-17579e406d3e"/,import json
+import requests
+
+def collect_data():
+    url = "your_ "https://rsrrrrrr.github.io/ai-bot/""
+    response = requests.get "https://rsrrrrrr.github.io/ai-bot/")
+    data = response.json(import requests
+
+# 12색 표준색상
+for color in data=results 
+{"color": {"dominantColorForeground": "White", "dominantColorBackground" "White" "dominant colors": ["White"], "accent color": "595144", "swing": false), "description" ("tags" ("bear", "polar", "animal", "mammal", "outdoor", "water", "white", "large", "walking", "snow", "standing" "captions": "text"; "a large white polar bear walking in the water", "confidence": 0.74197373782830931), requested": "33290a37-ad6742af-b647-c5a236ecd202", "metadata": {"width": 220, "height": 221, "armat" "peg")) 
+    print(color["name"])# 데이터베이스 수집# 수집된 데이터 확인
+print(data)( "binary_data.txt", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(*,*)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04B)
+ g_binary = 형식 (g, '04B)
+ b_binary = 형식 (b, '04B)
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(*색상)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
