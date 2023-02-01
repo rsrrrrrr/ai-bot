@@ -1,0 +1,16 @@
+ai,cht3.api_key = "834d0a00-bc00-4f00-00da-10000e000d0e"
+
+API 키 테스트
+model_engine = "text-davinci-002"
+프롬프트 = "GPT-3이란 무엇입니까?"
+
+완료 = 오펜다이. 완료.생성(
+엔진 = model_engine,
+프롬프트 = 프롬프트,
+max_tokens=1024,
+n = 1,
+중지 = 없음,
+온도 = 0.5,
+)
+
+메시지 = 완료.선택[0
