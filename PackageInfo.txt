@@ -1,0 +1,14 @@
+Package details:
+APRO (22.0)
+
+Package Name: OPEN AI
+Package Type: Self Service Package
+Platform: WIN64
+Locale: en_US
+Use OS Locale: Enabled
+
+Management Options:	•	 Remote Update Manager: Enabled
+	•	 Include extensions folder & Extension Manager command line tool: Disabled
+	•	 Include Adobe Asset Link: Disabled
+	•	 AUSST override XML included: Disabled
+	•	 Install at default directory: Enabled
