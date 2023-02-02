@@ -1,0 +1,156 @@
+<! 문서 유형 html>
+<html>
+ <머리>
+ <제목>AI연구특허진흥원</제목>
+ </머리>
+ < 바디>
+ <h1>'AI는 인간의 기능을 도와주는 도구입니다. 모든것은 창작자,연구자,개발자등의 지식의 이용에 의하여 창조되는 것입니다.'</h1>
+ <p>AI는 인간의 기능을 도와주는 도구입니다. 모든것은 창작자,연구자,개발자등의 지식의 이용에 의하여 창조되는 것입니다.AI 연구 개발 센터는 AI 기술의 성장을 촉진하고 지원하는 데 전념하고 있습니다. 그들은 AI를 발전시키고 사회에 도움이 되는 이러한 개발에 대한 특허를 받기 위해 다양한 프로젝트를 수행합니다. </p>
+ <a href="https://rsrrrrrr.github.io/ai-bot/">내 웹사이트 방문</a>
+ <a href="https://chat.openai.com/chat/834d0a00-bc00-4f00-00da-10000e000d0e">내 웹사이트 방문</a>
+ <a href="https://chat.openai.com/chat/">내 웹사이트 방문</a>
+ <a href="https://labs.openai.com/">OpenAI Labs 방문</a>
+ </바디>
+< / html>href=""https://rsrrrrrr.github.io/ai-bot/">usr</a>href="https://chat.openai.com/chat/834d0a08-bc31-4f80-81da-17579e406d3e"/,import json
+import requests
+
+def collect_data(binary_data.text):
+    url = "your_"https://rsrrrrrr.github.io/ai-bot/"
+    response = requests.get("https://rsrrrrrr.github.io/ai-bot/")
+    data = response.json(import requests
+
+# 12색 표준색상
+for color in data=results 
+{"color": {"dominantColorForeground": "White", "dominantColorBackground" "White" "dominantColors": ["White"], "accentColor": "595144", "isBwimg": false), "description" ("tags" ("bear", "polar", "animal", "mammal", "outdoor", "water", "white", "large", "walking", "snow", "standing" "captions": "text"; "a large white polar bear walking in the water", "confidence": 0.74197373782830931), requestid": "33290a37-ad6742af-b647-c5a236ecd202", "metadata": {"width": 220, "height": 221, "armat" "peg")) 
+    print(color["name"])# 데이터베이스 수집# 수집된 데이터 확인
+print(data)( "binary_data.text", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.text)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_data.12bit_binary_text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+response = requests.get("https://rsrrrrrr.github.io/ai-bot/")
+data = response.json(binary_data.json)
+
+# 수집된 데이터 확인
+print(data)( "binary_data.text", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.txt)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_data.12bit_binary_text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+ # 새 데이터로 모델 업데이트
+ model.update(data.txt)
+    return data(data.txt)
+
+def to_12bit_binary(r, g, b):
+    r_binary = format(r, '04b')
+    g_binary = format(g, '04b')
+    b_binary = format(b, '04b')
+    return r_binary + g_binary + b_binary
+
+data = collect_data((binary_data.text)))
+color = data["color"]
+binary_text = to_12bit_binary(color["r"], color["g"], color["b"])
+
+print(binary_text)
+with open("binary_data.txt", "w") as file:
+    file.write(binary_text)# 요청을 보내서 수집한 데이터를 파일로 저장
+response = requests.get("https://rsrrrrrr.github.io/ai-bot/")
+data =# 12색 표준색상
+for color in data=results 
+{"color": {"dominantColorForeground": "White", "dominantColorBackground" "White" "dominantColors": ["White"], "accentColor": "595144", "isBwimg": false), "description" ("tags" ("bear", "polar", "animal", "mammal", "outdoor", "water", "white", "large", "walking", "snow", "standing" "captions": "text"; "a large white polar bear walking in the water", "confidence": 0.74197373782830931), requestid": "33290a37-ad6742af-b647-c5a236ecd202", "metadata": {"width": 220, "height": 221, "armat" "peg")) 
+    print(color["name"])# 데이터베이스 수집# 수집된 데이터 확인
+print(data)( "binary_data.txt", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.text)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_data.text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+response = requests.get("https://rsrrrrrr.github.io/ai-bot/")
+data = response.json(binary_data.json)
+
+# 수집된 데이터 확인
+print(data)( "binary_data.text", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.text)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+ # 새 데이터로 모델 업데이트
+ model.update(data.text)
+with open("binary_data.text", "w") as file:
+    file.write(data.text)
+
+# 파일을 읽어서 모델에 적용
+with open("binary_data.text", "r") as file:
+    data = # 12색 표준색상
+for color in data=results 
+{"color": {"dominantColorForeground": "White", "dominantColorBackground" "White" "dominantColors": ["White"], "accentColor": "595144", "isBwimg": false), "description" ("tags" ("bear", "polar", "animal", "mammal", "outdoor", "water", "white", "large", "walking", "snow", "standing" "captions": "text"; "a large white polar bear walking in the water", "confidence": 0.74197373782830931), requestid": "33290a37-ad6742af-b647-c5a236ecd202", "metadata": {"width": 220, "height": 221, "armat" "peg")) 
+    print(color["name"])# 데이터베이스 수집# 수집된 데이터 확인
+print(data)( "binary_data.text", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.text)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_data.text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+response = requests.get("https://rsrrrrrr.github.io/ai-bot/")
+data = response.json(binary_data.json)
+
+# 수집된 데이터 확인
+print(data)( "binary_data.txt", "w")를 파일로 사용 :
+ file.write(binary_text)참인 동안:
+ # 데이터 수집
+ 데이터 = collect_data(binary_data.text)
+정의 to_12bit_binary(r, g, b):
+ r_binary = 형식 (r, '04b')
+ g_binary = 형식 (g, '04b')
+ b_binary = 형식 (b, '04b')
+ r_binary + g_binary + b_binary 반환
+
+색상 = (12, 34, 56)
+binary_text = to_12bit_binary(binary_data.text)
+인쇄 (binary_text) # "00001100 00100010 00111000"open("binary_data.txt", "w")를 파일로 사용:
+ 파일.쓰기(binary_text)
+ # 새 데이터로 모델 업데이트
+ model.update(data.text)
