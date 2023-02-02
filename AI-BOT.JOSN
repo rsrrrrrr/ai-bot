@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GPT-3 Text Generation</title>
+  </head>
+  <body>
+    <h1>GPT-3 Text Generation</h1>
+    <form>
+      <label for="prompt">Enter your prompt:</label>
+      <input type="text" id="prompt" name="prompt">
+      <br><br>
+      <button type="submit">Generate Text</button>
+    </form>
+    <br>
+    <div id="generated-text"></div>
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <title>GPT-3 Example</title>
+  </head>
+  <body>
+    <h1>GPT-3 Output:</h1>
+    <p id="output"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/openai@2.0.0/dist/openai.min.js"></script>
+    <script>
+      const API_KEY = "834d0a08-bc31-4f80-81da-17579e406d3e";
+      const modelEngine = "text-davinci-002";
+      const prompt = "What is GPT-3?";
+
+      const completion = new openai.Completion(API_KEY);
+      completion.create(modelEngine, prompt, {
+        maxTokens: 1024,
+        n: 1,
+        stop: null,
+        temperature: 0.5
+      }).then(function(result) {
+        document.querySelector("#output").innerText = result.choices[0].text;
+      });
+    </script>
+  </body>
+</html><html>
+  <head>
+    <title>GPT-3 Example</title>
+  </head>
+  <body>
+    <h1>GPT-3 Generated Text</h1>
+    <p id="generated-text">Loading...</p>
+    
+    <script>
+      async function generateText() {
+        // Replace YOUR_API_KEY with your actual API key
+        const apiKey = "834d0a08-bc31-4f80-81da-17579e406d3e";
+        
+        const modelEngine = "text-davinci-002";
+        const prompt = "GPT-3 is";
+        
+        const response = await fetch(`https://api.openai.com/v1/engines/${modelEngine}/jobs`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            prompt: prompt,
+            max_tokens: 1024,
+            n: 1,
+            stop: null,
+            temperature: 0.5
+          })
+        });
+        
+        const json = await response.json();
+        const message = json.choices[0].text;
+        
+        document.querySelector("#generated-text").innerHTML = message;
+      }
+      
+      generateText();
+    </script>
+  </body>
+</html><! 문서 유형 html>
+<html>
+ <머리>
+ <메타 문자 집합="UTF-8">
+ <메타 이름 = "뷰포트"콘텐츠 = "너비 = 장치 너비, 초기 크기 = 1.0">
+ <제목>AI 연구 특허 진흥원</제목>
+ <스타일>
+ /* AI 코드 생성기에 의해 생성 */
+ 본문 {
+ 글꼴 계열: 아리알, 산세리프;
+ 배경색: #f2f2f2;
+ }
+ .컨테이너 {
+ 최대 너비 : 1170px;
+ 여백: 0 자동;
+ 패딩: 30px;
+ }
+ h1 {
+ 텍스트 정렬: 가운데;
+ 글꼴 크기: 36px;
+ 색상: #333;
+ 여백 하단 : 20px;
+ }
+ .btn {
+ 배경색: #4CAF50;
+ 색깔: 백색;
+ 패딩: 14px 20px;
+ 테두리 : 없음;
+ 커서 : 포인터;
+ 여백 상단: 20px;
+ 디스플레이: 인라인 블록;
+ }
+ < / 스타일>
+ </머리>
+ < 바디>
+ <div 클래스 = "컨테이너">
+ <h1>AI연구특허진흥원에 오신 것을 환영합니다</h1>
+ <p>AI 기반 코드 생성기에서 생성된 코드의 예입니다.</p>
+ <버튼 클래스="btn">자세히 알아보기</버튼>
+ </div>
+ </바디>
+< / html>
+<머리>
+ <메타 문자 집합="UTF-8">
+ <메타 이름 = "뷰포트"콘텐츠 = "너비 = 장치 너비, 초기 크기 = 1.0">
+ <제목>AI 생성 코드</제목>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+ <스타일>
+ /* AI 코드 생성기에 의해 생성 */
+ 본문 {
+ 글꼴 계열: "Open Sans", sans-serif;
+ 배경색: #f2f2f2;
+ }
+ .컨테이너 {
+ 최대 너비 : 1170px;
+ 여백: 0 자동;
+ 패딩: 30px;
+ }
+ h1 {
+ 텍스트 정렬: 가운데;
+ 글꼴 크기: 36px;
+ 색상: #333;
+ 여백 하단 : 20px;
+ }
+ .btn {
+ 배경색: #4CAF50;
+ 색깔: 백색;
+ 패딩: 14px 20px;
+ 테두리 : 없음;
+ 커서 : 포인터;
+ 여백 상단: 20px;
+ 디스플레이: 인라인 블록;
+ }
+ < / 스타일>
+</머리>
+AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 
+목적으로 설립된 기관입니다.
+
+
+< 바디>
+ <헤더>
+ <탐색 클래스 = "탐색 모음">
+ <a 클래스 =“ "href = "#">   < / a>
+ <ul 클래스 = "탐색 목록">
+ <li class="nav-item"><a href="#">Home</a></li>
+ <li class="nav-item"><a href="#">About</a></li>
+ <li class="nav-item"><a href="#">Services</a></li>
+ <li class="nav-item"><a href="#">Contact</a></li>
+ </ul>
+ </내비게이션>
+ </헤더>
+ <섹션 클래스 = "영웅">
+ <div 클래스 = "컨테이너">
+ <h1>AI 연구특허진흥원</h1>
+ <p>AI 기반 코드 생성기에서 생성된 샘플 웹사이트입니다.</p>
+ <a class="btn" href="#">자세히 알아보기</a>
+ </div>
+ </섹션>
+ <메인 클래스 = "컨테이너">
+ <섹션 클래스 = "서비스">
+ <h2>당사 서비스</h2>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다.</p>
+ <div 클래스 = "서비스 그리드">
+ <div 클래스 = "서비스 항목">
+ <i class="fas fa-desktop"></i>
+ <h3>웹 개발</h3>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다.</p>
+ </div>
+ <div 클래스 = "서비스 항목">
+ <i class="fas fa-mobile-alt"></i>
+ <h3>모바일 개발</h3>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다.</p>
+ </div>
+ <div 클래스 = "서비스 항목">
+ <i class="FAS FA-globe"></i>
+ <h3>SEO 최적화</h3>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel malesuada velit, vel dictum velit.</p>
+ </div>
+ </div>
+ </섹션>
+ <섹션 클래스 = "정보">
+ <h2>AI 연구특허진흥원</h2>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다.</p>
+
+<
+< 바디>
+ <헤더>
+ <탐색 클래스 = "탐색 모음">
+ <a 클래스 = "로고"href = "#">로고 < / a>
+ <ul 클래스 = "탐색 목록">
+ <li class="nav-item"><a href="#">Home</a></li>
+ <li class="nav-item"><a href="#">About</a></li>
+ <li class="nav-item"><a href="#">Services</a></li>
+ <li class="nav-item"><a href="#">Contact</a></li>
+ </ul>
+ </내비게이션>
+ </헤더>
+ <섹션 클래스 = "영웅">
+ <div 클래스 = "컨테이너">
+ <h1>AI 생성 코드에 오신 것을 환영합니다</h1>
+ <p>AI 기반 코드 생성기에서 생성된 샘플 웹사이트입니다.</p>
+ <a class="btn" href="#">자세히 알아보기</a>
+ </div>
+ </섹션>
+ <메인 클래스 = "컨테이너">
+ <섹션 클래스 = "서비스">
+ <h2>당사 서비스</h2>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다..</p>
+ <div 클래스 = "서비스 그리드">
+ <div 클래스 = "서비스 항목">
+ <i class="fas fa-desktop"></i>
+ <h3>웹 개발</h3>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다..</p>
+ </div>
+ <div 클래스 = "서비스 항목">
+ <i class="fas fa-mobile-alt"></i>
+ <h3>모바일 개발</h3>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다..</p>
+ </div>
+ <div 클래스 = "서비스 항목">
+ <i 클래스 = "FAS FA-글로브">< / i>
+ <h3>SEO 최적화</h3>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다..</p>
+ </div>
+ </div>
+ </섹션>
+ <섹션 클래스 = "정보">
+ <h2>회사 소개</h2>
+ <p>AI 연구 특허 진흥원 (연구 특허 진흥원)는 기술 개발과 특허의 수집, 관리, 상용화 등 AI 기술의 진전에 기여하는 목적으로 설립된 기관입니다.</p> 
