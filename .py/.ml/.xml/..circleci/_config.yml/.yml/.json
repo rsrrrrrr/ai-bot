@@ -1,0 +1,441 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./inspectionProfiles",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}This is a Python function named auto_train_model that uses OpenAI's GPT-4 model and the AutoML feature to automatically tune the hyperparameters for the model. The function takes in four arguments:
+
+model_ai4dbot: A string representing the ID of the GPT-4 model to train.
+dataset_ai4dbot: A string representing the ID of the dataset to use for training.
+training_data: A string representing the path to the JSON file containing the training data.
+max_iterations: An integer representing the maximum number of iterations to run AutoML for.
+The function starts an AutoML training job by calling the openai.Training.create method with the appropriate arguments. It then prints status updates while the job is running by calling the openai.Training.retrieve method in a loop until the job either succeeds or fails. If the job succeeds, the function prints a success message and returns the ID of the AutoML training job that was started. If the job fails, the function prints a failure message and returns the ID of the failed job.
+import openai_secret_manager
+import openai
+import time
+from flask import Flask, render_template
+
+# Set up OpenAI API client
+assert "openai" in openai_secret_manager.get_services(1)
+secrets = openai_secret_manager.get_secret("ai4dbot")
+openai.api_key = secrets["api_key"]
+
+# Set up Flask app
+app = Flask(__name__)
+
+# Define route for homepage
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+# Define route for about page
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+# Define route for contact page
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+# Define route for services page
+@app.route("/services")
+def services():
+    return render_template("services.html")
+
+# Define route for training page
+@app.route("/training")
+def training():
+    model_ai4dbot = "your_model_id"
+    dataset_ai4dbot = "your_dataset_id"
+    training_data = "path/to/your/training/data.json"
+    max_iterations = 100
+
+    job = auto_train_model(model_ai4dbot, dataset_ai4dbot, training_data, max_iterations)
+
+    return render_template("training.html", job_id=job.id)
+
+def auto_train_model(model_ai4dbot, dataset_ai4dbot, training_data, max_iterations):
+    """
+    Trains an OpenAI GPT-4 model using the AutoML feature, which automatically tunes the hyperparameters.
+
+    Args:
+    - model_ai4dbot (str): ID of the GPT-4 model to train
+    - dataset_ai4dbot (str): ID of the dataset to use for training
+    - training_data (str): Path to the JSON file containing the training data
+    - max_iterations (int): Maximum number of iterations to run AutoML for
+
+    Returns:
+    - job_ai4dbot (str): ID of the AutoML training job that was started
+    """
+
+    # Start AutoML training job
+    response = openai.Training.create(
+        model=model_ai4dbot,
+        dataset=dataset_ai4dbot,
+        training_data=training_data,
+        max_iterations=max_iterations,
+    )
+
+    # Print status updates while job is running
+    job_id = response["id"]
+    print(f"Training job started: {job_id}")
+    while True:
+        job_status = openai.Training.retrieve(job_id)["status"]
+        if job_status == "succeeded":
+            print(f"Training job {job_id} succeeded.")
+            break
+        elif job_status == "failed":
+            print(f"Training job {job_id} failed.")
+            break
+        else:
+            print(f"Training job {job_id} status: {job_status}")
+            time.sleep(10)
+
+    return response["model_checkpoint"]
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    import openai_secret_manager
+    import requests
+    
+    # load credentials
+    assert "openai" in openai_secret_manager.get_services()
+    secrets = openai_secret_manager.get_secret("openai")
+    
+    # set up API endpoint and headers
+    endpoint = "https://api.openai.com/v1/data/sets/" + "your_dataset_id" + "/generate"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {secrets['api_key']}",
+    }
+    
+    # set up prompt and model settings
+    prompt = (
+        "This is a prompt for generating new data in the dataset using GPT-3. "
+        "Please modify this prompt as per your needs."
+    )
+    model_settings = {
+        "model": "text-davinci-002",
+        "prompt": prompt,
+        "temperature": 0.5,
+        "max_tokens": 2048,
+    }
+    
+    # send API request and get response
+    response = requests.post(endpoint, headers=headers, json=model_settings)
+    
+    # print response
+    print(response.json())
+    import openai_secret_manager
+import requests
+
+# load credentials
+assert "openai" in openai_secret_manager.get_services()
+secrets = openai_secret_manager.get_secret("openai")
+
+# set up API endpoint and headers
+endpoint = "https://api.openai.com/v1/data/sets/" + "your_dataset_id" + "/generate"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {secrets['api_key']}",
+}
+
+# set up prompt and model settings
+prompt = (
+    "This is a prompt for generating new data in the dataset using GPT-3. "
+    "Please modify this prompt as per your needs."
+)
+model_settings = {
+    "model": "text-davinci-002",
+    "prompt": prompt,
+    "temperature": 0.5,
+    "max_tokens": 20000,
+}
+
+# send API request and get response
+response = requests.post(endpoint, headers=headers, json=model_settings)
+
+# print response
+print(response.json())
+import openai_secret_manager
+import requests
+
+# load credentials
+assert "openai" in openai_secret_manager.get_services()
+secrets = openai_secret_manager.get_secret("openai")
+
+# set up API endpoint and headers
+endpoint = "https://api.openai.com/v1/data/sets/rsrrrrrr123@naver.com/generate"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {secrets['api_key']}",
+}
+
+# set up prompt and model settings
+prompt = (
+    "This is a prompt for generating new data in the dataset using GPT-3. "
+    "Please modify this prompt as per your needs."
+)
+model_settings = {
+    "model": "text-davinci-002",
+    "prompt": prompt,
+    "temperature": 0.5,
+    "max_tokens": 20000,
+}
+
+# send API request and get response
+response = requests.post(endpoint, headers=headers, json=model_settings)
+
+# print response
+print(response.json())
+import openai_secret_manager
+import requests
+
+# load credentials
+assert "openai" in openai_secret_manager.get_services()
+secrets = openai_secret_manager.get_secret("openai")
+
+# set up API endpoint and headers
+endpoint = "https://api.openai.com/v1/data/sets/rsrrrrrr123@naver.com/generate"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {secrets['api_key']}",
+}
+
+# set up prompt and model settings
+prompt = (
+    "This is a prompt for generating new data in the dataset using GPT-3. "
+    "Please modify this prompt as per your needs."
+)
+model_settings = {
+    "model": "text-davinci-002",
+    "prompt": prompt,
+    "temperature": 0.5,
+    "max_tokens": 20000,
+}
+
+# send API request and get response
+response = requests.post(endpoint, headers=headers, json=model_settings)
+
+# print response
+print(response.json())
+from flask import Flask, redirect
+
+app = Flask(__name__)
+
+@app.route("/")
+def redirect_to_website():
+    return redirect("https://chat.ai4dbot.net/wjdgoTsmsep")
+
+if __name__ == "__main__":
+    app.run(host="211.108.245.221", port=8090)
+    my_data = {} # 빈 딕셔너리를 생성하여 데이터 저장
+
+    # 데이터 검색
+    if key in my_data:
+        value = my_data[key]
+        print(f"Value for key '{key}' is '{value}'")
+    else:
+        print(f"No value found for key '{key}'")
+    
+    # 데이터 저장
+    my_data[key] = value
+    print(f"Value '{value}' saved for key '{key}'")
+    
+    # 데이터 편집
+    if key in my_data:
+        my_data[key] = new_value
+        print(f"Value for key '{key}' changed to '{new_value}'")
+    else:
+        print(f"No value found for key '{key}'")
+        import openai_secret_manager
+        import openai
+        import time
+        
+        # Set up OpenAI API client
+        assert "openai" in openai_secret_manager.get_services(1234)
+        secrets = openai_secret_manager.get_secret("ai4dbot")
+        openai.api_key = secrets["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"]
+        
+        
+        def auto_train_model(model_ai4dbot, dataset_ai4dbot, training_data, max_iterations):
+            """
+            Trains an OpenAI GPT-4 model using the AutoML feature, which automatically tunes the hyperparameters.
+        
+            Args:
+            - model_ai4dbot (str): ID of the GPT-4 model to train
+            - dataset_ai4dbot (str): ID of the dataset to use for training
+            - training_data (str): Path to the JSON file containing the training data
+            - max_iterations (int): Maximum number of iterations to run AutoML for
+        
+            Returns:
+            - job_ai4dbot (str): ID of the AutoML training job that was started
+            """
+        
+            # Start AutoML training job
+            response = openai.Training.create(
+                model=model_ai4dbot,
+                dataset=dataset_ai4dbot,
+                training_data=training_data,
+                max_iterations=max_iterations,
+            )
+        
+            # Print status updates while job is running
+            job_ai4dbot = response["ai4dbot"]
+            print(f"AutoML training job started with ID {job_ai4dbot}")
+            while True:
+                job_status = openai.Training.retrieve(job_ai4dbot)["status"]
+                if job_status == "succeeded":
+                    print("AutoML training job completed successfully")
+                    break
+                elif job_status == "failed":
+                    print("AutoML training job failed")
+                    break
+                else:
+                    print(f"AutoML training job status: {job_status}")
+                    time.sleep(60)
+        
+        # Example usage of dictionary
+        my_data = {"key1": "value1", "key2": "value2""key3": "value3""key4": "value4""key5": "value5""key6": "value6""key7": "value7""key8": "value8""key9": "value9""key0": "value0"} # create an empty dictionary to store data
+        
+        # Data retrieval
+        key = "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"
+        if key in my_data:
+            value = my_data[key]
+            print(f"Value for key '{key}' is '{value}'")
+        else:
+            print(f"No value found for key '{key}'")
+        
+        # Data storage
+        value = secrets[key]
+        my_data[key] = value
+        print(f"Value '{value}' saved for key '{key}'")
+        
+        # Data editing
+        key = "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"
+        if key in my_data:
+            new_value = "new_value"
+            my_data[key] = new_value
+            print(f"Value for key '{key}' changed to '{new_value}'")
+        else:
+            print(f"No value found for key '{key}'")
+        time.sleep(60)my_data = {} # 빈 딕셔너리를 생성하여 데이터 저장
+        time.sleep(60)
+        my_data = {} # 빈 딕셔너리를 생성하여 데이터 저장
+        url = "https://rsrrrrrr.github.io/ai-bot/"
+
+        # HTML 코드 생성
+        html = f"<html><head><title>AI Bot</title></head><body><iframe src='{url}' width='100%' height='100%'></iframe></body></html>"
+        
+        # HTML 코드 저장
+        with open("ai_bot.html", "w") as file:
+            file.write(html)
+            url = "https://rsrrrrrr.github.io/ai-bot/"
+
+            # HTML 코드 생성
+            html = f"<html><head><title>AI Bot</title></head><body><iframe src='{url}' width='100%' height='100%'></iframe></body></html>"
+            
+            # HTML 코드 저장
+            with open("ai_bot.html", "w") as file:
+                file.write(html)
+                import openai_secret_manager
+                import openai
+                import time
+                
+                # Set up OpenAI API client
+                assert "openai" in openai_secret_manager.get_services(1234)
+                secrets = openai_secret_manager.get_secret("ai4dbot")
+                openai.api_key = secrets["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"]
+                
+                
+                def auto_train_model(model_ai4dbot, dataset_ai4dbot, training_data, max_iterations):
+                    """
+                    Trains an OpenAI GPT-4 model using the AutoML feature, which automatically tunes the hyperparameters.
+                
+                    Args:
+                    - model_ai4dbot (str): ID of the GPT-4 model to train
+                    - dataset_ai4dbot (str): ID of the dataset to use for training
+                    - training_data (str): Path to the JSON file containing the training data
+                    - max_iterations (int): Maximum number of iterations to run AutoML for
+                
+                    Returns:
+                    - job_ai4dbot (str): ID of the AutoML training job that was started
+                    """
+                
+                    # Start AutoML training job
+                    response = openai.Training.create(
+                        model=model_ai4dbot,
+                        dataset=dataset_ai4dbot,
+                        training_data=training_data,
+                        max_iterations=max_iterations,
+                    )
+                
+                    # Print status updates while job is running
+                    job_ai4dbot = response["ai4dbot"]
+                    print(f"AutoML training job started with ID {job_ai4dbot}")
+                    while True:
+                        job_status = openai.Training.retrieve(job_ai4dbot)["status"]
+                        if job_status == "succeeded":
+                            print("AutoML training job completed successfully")
+                            break
+                        elif job_status == "failed":
+                            print("AutoML training job failed")
+                            break
+                        else:
+                            print(f"AutoML training job status: {job_status}")
+                            time.sleep(60)
+                
+                # Example usage of dictionary
+                my_data = {"key1": "value1", "key2": "value2", "key3": "value3", "key4": "value4", "key5": "value5", "key6": "value6", "key7": "value7", "key8": "value8", "key9": "value9", "key0": "value0"}#
+                create an empty dictionary to store data
+                
+                # Data retrieval
+                key = "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"
+                if key in my_data:
+                    value = my_data[key]
+                    print(f"Value for key '{key}' is '{value}'")
+                else:
+                    print(f"No value found for key '{key}'")
+                
+                # Data storage
+                value = secrets[key]
+                my_data[key] = value
+                print(f"Value '{value}' saved for key '{key}'")
+                
+                # Data editing
+                key = "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"
+                if key in my_data:
+                    new_value = "new_value"
+                    my_data[key] = new_value
+                    print(f"Value for key '{key}' changed to '{new_value}'")
+                else:
+                    print(f"No value found for key '{key}'")
+                time.sleep(60)my_data = {} # 빈 딕셔너리를 생성하여 데이터 저장
+                time.sleep(60)
+                my_data = {} # 빈 딕셔너리를 생성하여 데이터 저장url = "https://rsrrrrrr.github.io/ai-bot/"
+                
+                # HTML 코드 생성
+                html = f"<html><head><title>AI Bot</title></head><body><iframe src='{url}' width='100%' height='100%'></iframe></body></html>"
+                
+                # HTML 코드 저장
+                with open("ai_bot.html", "w") as file:
+                    file.write(html)
+                my_data = {
+                    "key1": "value1",
+                    "key2": "value2",
+                    "key3": "value3",
+                    "key4": "value4",
+                    "key5": "value5",
+                    "key6": "value6",
+                    "key7": "value7",
+                    "key8": "value8",
+                    "key9": "value9",
+                    "key0": "value0"
+                } 
